@@ -1,0 +1,11 @@
+import re
+
+a_list = ['(10)안녕하세요', '오늘은 날씨가(추워43423)', '(apple)매우 춥네요(cold)']
+
+p = re.compile('\(.*?\)')
+
+for i in range(len(a_list)):
+    real_text = re.sub(p, "", a_list[i])
+    a_list[i] = real_text
+
+print(a_list)
